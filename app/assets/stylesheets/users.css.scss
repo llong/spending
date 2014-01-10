@@ -8,6 +8,7 @@
 .container {
 	width: 90%;
 	text-align: center;
+	margin: auto;
 }
 
 .item {
@@ -42,3 +43,11 @@ a.button:hover {
 }
 
 h1,h2 { font-weight: 300; }
+
+
+@media (max-width: 700px) {
+	.column {
+	  float: none;
+	  width: 90%;
+	}
+}
