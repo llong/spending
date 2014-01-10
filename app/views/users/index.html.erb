@@ -15,8 +15,8 @@ Remaining Balance: $<%= @lewisSpent %>
 	       <strong>Price:</strong> $<%= user.amount %><br />
 	       <strong>Posted:</strong> <%= user.updated_at.localtime.strftime("%d %b, %Y %I:%M %p") %><br />
 	       </p>
-	       <%= fa_icon "fa-edit" %>
-	       <%= link_to '', edit_user_path(user), :class => 'fa-download' %> | 
+	       
+	       <%= link_to '', edit_user_path(user) %> | 
 	       <%= link_to 'Remove', user, :confirm => "Are you sure you want to delete this?", :method => :delete %> 
 
 	    </div>
