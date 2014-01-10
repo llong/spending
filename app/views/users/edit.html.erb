@@ -1,0 +1,13 @@
+<%= form_for @item do |f| %>
+<%= f.label :name %><br>
+<%= f.text_field :name %><br>
+<%= f.label :title %><br>
+<%= f.text_field :title %><br>
+<%= f.label :details %><br>
+<%= f.text_area :details %><Br>
+<%= f.label :amount %><br>
+<%= f.text_field :amount %><br>
+<%= f.submit "Update Item" %>
+<% end %>
+
+<p><%= link_to "Home", '/' %>
