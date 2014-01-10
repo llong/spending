@@ -4,7 +4,7 @@ source 'https://rubygems.org'
 gem 'rails', '4.0.2'
 
 # Use sqlite3 as the database for Active Record
-gem 'pg'
+gem 'sqlite3'
 
 # Use SCSS for stylesheets
 gem 'sass-rails', '~> 4.0.0'
@@ -27,8 +27,7 @@ gem 'turbolinks'
 # Build JSON APIs with ease. Read more: https://github.com/rails/jbuilder
 gem 'jbuilder', '~> 1.2'
 #gem 'font-awesome-rails'
-gem 'rails_12factor'
-gem 'unicorn'
+
 
 group :doc do
   # bundle exec rake doc:rails generates the API under doc/api.
@@ -36,6 +35,12 @@ group :doc do
 end
 
 ruby "2.0.0"
+
+group :production, :staging do
+  gem 'rails_12factor'
+  gem 'unicorn'
+  gem 'pg'
+end
 # Use ActiveModel has_secure_password
 # gem 'bcrypt-ruby', '~> 3.1.2'
 

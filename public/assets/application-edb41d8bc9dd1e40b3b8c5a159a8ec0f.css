@@ -1,0 +1,62 @@
+/*
+
+
+ */
+
+@import url(http://fonts.googleapis.com/css?family=Open+Sans:400,300,600,700);
+
+ 
+body { 
+  font-family: 'Open Sans', sans-serif; 
+  font-weight: 400;
+  color: #464646;
+}
+
+a { text-decoration: none }
+a:hover { color: skyblue; }
+
+/* COLOR PALETTE */
+/* Light blue: D7EEFC
+/* Light teal: AFCFDA
+/* Med teal: 7DA2A8
+/* dark blue: 748194
+/* dark teal: 183E4B */
+
+
+.container {
+	width: 90%;
+	text-align: center;
+}
+
+.item {
+	display: block;
+	border-left: solid 4px #c8c8c8;
+	background: #f5f5f6;
+	padding: 1em;
+	margin-bottom: 1em;
+	border-radius: 0 4px 4px 0;
+	text-align: left;
+}
+
+.column {
+	width: 40%;
+	float: left;
+	margin: 2% 5% 50px 5%
+}
+
+a.button, a.button:visited {
+	display: inline-block;
+	background: #333333;
+	padding: 5px 10px;
+	border-radius: 4px;
+	text-decoration: none;
+	color: #ffffff;
+	font-face: arial;
+	font-weight: 400;
+}
+
+a.button:hover {
+	background: #999999;
+}
+
+h1,h2 { font-weight: 300; }
