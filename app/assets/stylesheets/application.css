@@ -9,6 +9,7 @@ body {
   font-family: 'Open Sans', sans-serif; 
   font-weight: 400;
   color: #464646;
+  padding: 1em;
 }
 
 a { text-decoration: none }

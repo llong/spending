@@ -1,3 +1,5 @@
+<div class="row">
+<div class="col-md-9">
 <%= form_for @item do |f| %>
 <%= f.label :name %><br>
 <%= f.text_field :name %><br>
@@ -7,7 +9,9 @@
 <%= f.text_area :details %><Br>
 <%= f.label :amount %><br>
 <%= f.text_field :amount %><br>
-<%= f.submit "Update Item" %>
+<p><%= f.submit "Update Item",  :class => 'btn btn-primary' %></p>
 <% end %>
+</div>
+</div>
 
-<p><%= link_to "Home", '/' %>
+<p><%= link_to "Home", '/' %></p>
