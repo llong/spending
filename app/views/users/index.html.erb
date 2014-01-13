@@ -1,13 +1,16 @@
+<p>
 <div class="btn btn-primary">
-  <%= link_to 'Add New Item', new_user_path, :class => 'fa fa-plus' %>
+  <%= link_to ' Add New Item', new_user_path, :class => 'fa fa-plus' %>
 </div>
+</p>
+
 <div class="container">
 
 
 <div style="clear:both"></div>
 <div class="column">
 <h1>Lewis</h1>
-<h2>Remaining Balance: $<%= @lewisSpent %></h2>
+<h2>Remaining Balance: $<%= number_with_precision(@lewisSpent, :precision => 2) %></h2>
 
 	<% @lewis.each do |user| %>
 	    
@@ -20,7 +23,7 @@
 	       <%= user.title.split.map(&:capitalize).join(' ') %><br />
 	       <%= user.details %><br />
 	       <p>
-	       <strong>Price:</strong> $<%= user.amount %><br />
+	       <strong>Price:</strong> $<%= number_with_precision(user.amount, :precision => 2) %><br />
 	       <strong>Posted:</strong> <%= user.updated_at.localtime.strftime("%d %b, %Y %I:%M %p") %><br />
 	       </p>
 	       
@@ -33,7 +36,7 @@
 
 <div class="column">
   <h1>Xuemin</h1>
-  <h2>Remaining Balance: $<%= @xueminSpent %></h2>
+  <h2>Remaining Balance: $<%= number_with_precision(@xueminSpent, :precision => 2) %></h2>
 	 
     <% @xuemin.each do |user| %>
 	    
@@ -45,7 +48,7 @@
 	  <%= user.title.split.map(&:capitalize).join(' ') %><br />
 	       <%= user.details %><br />
 	       <p>
-	       <strong>Price:</strong> $<%= user.amount %><br />
+	       <strong>Price:</strong> $<%= number_with_precision(user.amount, :precision => 2) %><br />
 	       <strong>Posted:</strong> <%= user.updated_at.localtime.strftime("%d %b, %Y %I:%M %p") %><br />
 	       </p>
 	  </div>
