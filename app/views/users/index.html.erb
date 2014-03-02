@@ -14,21 +14,7 @@
 
 	<% @lewis.each do |user| %>
 	    
-	    <div class="item"> 
-          <div class="row text-right">
-	       <%= link_to '', edit_user_path(user), :class => "fa fa-pencil" %>
-	       <%= link_to '', user, :confirm => "Are you sure you want to delete this?", :method => :delete, :class => 'fa fa-times' %> 
-	       </div>
-
-	       <%= user.title.split.map(&:capitalize).join(' ') %><br />
-	       <%= user.details %><br />
-	       <p>
-	       <strong>Price:</strong> $<%= number_with_precision(user.amount, :precision => 2) %><br />
-	       <strong>Posted:</strong> <%= user.updated_at.localtime.strftime("%d %b, %Y %I:%M %p") %><br />
-	       </p>
-	       
-
-	    </div>
+	   <%= render 'user_list', :user => user %>
  <% end %>
 </div>
 
@@ -39,19 +25,7 @@
   <h2>Remaining Balance: $<%= number_with_precision(@xueminSpent, :precision => 2) %></h2>
 	 
     <% @xuemin.each do |user| %>
-	    
-	  <div class="item">
-	  <div class="row text-right">
-	       <%= link_to '', edit_user_path(user), :class => "fa fa-pencil" %>
-	       <%= link_to '', user, :confirm => "Are you sure you want to delete this?", :method => :delete, :class => 'fa fa-times' %> 
-	       </div>
-	  <%= user.title.split.map(&:capitalize).join(' ') %><br />
-	       <%= user.details %><br />
-	       <p>
-	       <strong>Price:</strong> $<%= number_with_precision(user.amount, :precision => 2) %><br />
-	       <strong>Posted:</strong> <%= user.updated_at.localtime.strftime("%d %b, %Y %I:%M %p") %><br />
-	       </p>
-	  </div>
+      <%= render 'user_list', :user => user %>
 	  <% end %>
  </div>
 
