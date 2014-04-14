@@ -3,8 +3,8 @@ class UsersController < ApplicationController
   	@items = User.all
   	@users = User.where
   	@lewis = @items.find_all_by_name('Lewis')
-  	lewisBalance = 900.00
-  	xueminBalance = 900.00
+  	lewisBalance = 1200.00
+  	xueminBalance = 1200.00
   	@lewisSpent = lewisBalance - User.where(:name => 'Lewis').sum(:amount).round(2)
   	@xueminSpent = xueminBalance - User.where(:name => 'Xuemin').sum(:amount).round(2)
   	@xuemin = @items.find_all_by_name('Xuemin')

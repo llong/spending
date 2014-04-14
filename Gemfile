@@ -26,6 +26,8 @@ gem 'turbolinks'
 
 # Build JSON APIs with ease. Read more: https://github.com/rails/jbuilder
 gem 'jbuilder', '~> 1.2'
+gem 'execjs'
+gem 'therubyracer'
 #gem 'font-awesome-rails'
 
 
@@ -43,7 +45,7 @@ end
 group :production, :staging do
   gem 'rails_12factor'
   gem 'unicorn'
-  gem 'pg'
+  gem 'sqlite3'
 end
 # Use ActiveModel has_secure_password
 # gem 'bcrypt-ruby', '~> 3.1.2'
