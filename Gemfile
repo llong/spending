@@ -45,7 +45,7 @@ end
 group :production, :staging do
   gem 'rails_12factor'
   gem 'unicorn'
-  gem 'sqlite3'
+  gem 'pg'
 end
 # Use ActiveModel has_secure_password
 # gem 'bcrypt-ruby', '~> 3.1.2'
