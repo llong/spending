@@ -17,11 +17,22 @@ a.fa:hover { color: #748194 }
 .btn, input[type=button] { 
   background: linear-gradient(to bottom, #748194,#183E4B);
   display: inline-block;
-  padding: .3em .5em;
+  padding: .2em .5em;
   outline: none;
   border: none;
 }
 
+.details {
+	max-height: 1px;
+	display: none;
+	-webkit-transition: .5s;
+	transition:  .5s;
+}
+
+.details.show {
+	display: block;
+	max-height: 999px;
+}
 
 .btn:hover {
 	background: #748194;
@@ -30,13 +41,12 @@ a.fa:hover { color: #748194 }
 .navbar {
 	position: fixed;
 	top: 0;
-	width: 100%;
-	height: 35px;
-	padding: 0 12px;
+	width: calc(100% - 24px);
+	padding: 5px 12px;
 	background: #232323;
 }
-
-.navbar a { margin-top: 5px; }
+/*
+.navbar a { margin: 5px 0; }*/
 
 .container {
 	width: 90%;
@@ -48,7 +58,7 @@ a.fa:hover { color: #748194 }
 	color: #D7EEFC;
 	display: block;
 	background: #183E4B;
-	margin-bottom: 1em;
+	margin-bottom: 1.5em;
 	padding-bottom: .5em;
 	border-radius: 0 4px 4px 0;
 	text-align: left;
@@ -66,7 +76,7 @@ a.fa:hover { color: #748194 }
 	background: #24747c;
 	padding: .1em 0;
 	margin-bottom: .5em;
-	padding: 0 15px;
+	padding: 0 0 0 15px;
 	text-shadow: 0 -4px 0 0 #0f3135;
 }
 

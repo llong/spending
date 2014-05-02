@@ -1,7 +1,7 @@
 $(document).ready(function(){
-	$('.details').hide();
 
-	$('.row').click(function(){
-		$(this).next('.details').toggle();
+
+	$('.info').click(function(){
+		$(this).parent().parent().next('.details').toggleClass('show');
 	})
 })
