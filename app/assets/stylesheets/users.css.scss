@@ -3,9 +3,11 @@
 /* Light teal: AFCFDA
 /* Med teal: 7DA2A8
 /* dark blue: 748194
-/* dark teal: 183E4B */
+/* dark teal: 0f3135 */
 
-body { background: #33A6B2; }
+html, body { margin: 0; padding: 0;}
+
+body { background: #0f3135; padding-top: 30px;}
 
 .fa { font-family: 'FontAwesome'; font-size: 24px; }
 a.fa, a.fa:hover { text-decoration: none; }
@@ -13,41 +15,60 @@ a.fa { color: #7DA2A8; }
 a.fa:hover { color: #748194 }
 .btn, .btn input[type='submit'], .btn a, .btn a:hover { color: #fff;}
 .btn, input[type=button] { 
-  background: #183E4B;
+  background: linear-gradient(to bottom, #748194,#183E4B);
   display: inline-block;
-  padding: .5em 1em;
-  border-radius: 4px;
+  padding: .3em .5em;
   outline: none;
   border: none;
 }
+
 
 .btn:hover {
 	background: #748194;
 }
 
 .navbar {
-	padding-left: 1em;
-	background: #464646;
+	position: fixed;
+	top: 0;
+	width: 100%;
+	height: 35px;
+	padding: 0 12px;
+	background: #232323;
 }
+
+.navbar a { margin-top: 5px; }
 
 .container {
 	width: 90%;
 	max-width: 1200px;
-	text-align: center;
 	margin: auto;
 }
 
 .item {
+	color: #D7EEFC;
 	display: block;
-	border-left: solid 4px #c8c8c8;
-	background: #fff;
-	padding: 1em;
+	background: #183E4B;
 	margin-bottom: 1em;
+	padding-bottom: .5em;
 	border-radius: 0 4px 4px 0;
 	text-align: left;
 }
 
+.item p {
+	margin: .2em 15px;
+}
+
 .item a.fa { margin-right: 8px; }
+
+.item-title {
+	color: #fff;
+	font-size: 1.3em;
+	background: #24747c;
+	padding: .1em 0;
+	margin-bottom: .5em;
+	padding: 0 15px;
+	text-shadow: 0 -4px 0 0 #0f3135;
+}
 
 .column {
 	width: 40%;
@@ -64,7 +85,7 @@ a.button, a.button:visited {
 	border-radius: 4px;
 	text-decoration: none;
 	color: #ffffff;
-	font-face: arial;
+	font-family: arial;
 	font-weight: 400;
 }
 
@@ -74,12 +95,23 @@ a.button:hover {
 
 .float-right { float: right; }
 
+.fa-times:before { color: #ff9696;}
+
 h1,h2 { font-weight: 300; }
 
 
 @media (max-width: 700px) {
 	.column {
 	  float: none;
-	  width: 90%;
+	  width: 100%;
+	  margin: 0;
 	}
+
+	.container {
+		width: 98%;
+	}
+
+	h1,h2 { margin-left: 12px; }
+
+	form { margin-left: 12px;}
 }
