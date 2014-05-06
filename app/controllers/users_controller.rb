@@ -1,6 +1,7 @@
 class UsersController < ApplicationController
   def index
-  	@items = User.all
+  	@items = User.paginate(:page => params[:page], :per_page => 5)
+    #@items = User.all
   	@users = User.where
   	@lewis = @items.find_all_by_name('Lewis')
   	lewisBalance = 1500.00

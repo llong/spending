@@ -13,6 +13,7 @@
 	    
 	   <%= render 'user_list', :user => user %>
  <% end %>
+ <%= will_paginate @lewis, page_links: false, previous_label: '', next_label: '' %>
 </div>
 
 
@@ -24,6 +25,8 @@
     <% @xuemin.each do |user| %>
       <%= render 'user_list', :user => user %>
 	  <% end %>
+	
+	<%= will_paginate @xuemin, page_links: false, previous_label: '', next_label: '' %>
  </div>
 
 </div> <!-- END CONTAINER -->
