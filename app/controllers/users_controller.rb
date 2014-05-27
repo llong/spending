@@ -3,12 +3,12 @@ class UsersController < ApplicationController
   	@items = User.paginate(:page => params[:page], :per_page => 5)
     #@items = User.all
   	@users = User.where
-  	@lewis = @items.find_all_by_name('Lewis')
+  	@lewis = @items.find_all_by_name('Lewis', order: "created_at DESC")
   	lewisBalance = 1500.00
   	xueminBalance = 1500.00
   	@lewisSpent = lewisBalance - User.where(:name => 'Lewis').sum(:amount).round(2)
   	@xueminSpent = xueminBalance - User.where(:name => 'Xuemin').sum(:amount).round(2)
-  	@xuemin = @items.find_all_by_name('Xuemin')
+  	@xuemin = @items.find_all_by_name('Xuemin', order: "created_at DESC")
   end
 
   def new
