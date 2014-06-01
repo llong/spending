@@ -4,8 +4,8 @@ class UsersController < ApplicationController
     #@items = User.all
   	@users = User.where
   	@lewis = @items.find_all_by_name('Lewis', order: "created_at DESC")
-  	lewisBalance = 1500.00
-  	xueminBalance = 1500.00
+  	lewisBalance = 1800.00
+  	xueminBalance = 1800.00
   	@lewisSpent = lewisBalance - User.where(:name => 'Lewis').sum(:amount).round(2)
   	@xueminSpent = xueminBalance - User.where(:name => 'Xuemin').sum(:amount).round(2)
   	@xuemin = @items.find_all_by_name('Xuemin', order: "created_at DESC")
