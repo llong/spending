@@ -46,6 +46,7 @@ Spending::Application.configure do
   config.log_level = :info
   config.assets.cache_store = :dalli_store
 
+
   # Prepend all log lines with the following tags.
   # config.log_tags = [ :subdomain, :uuid ]
 

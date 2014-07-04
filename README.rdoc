@@ -1,3 +1,4 @@
+
 This is a simple app created in Ruby on Rails to track monthly spending. It was created for my wife and I to use to keep track of the monthly allowance of 'play money' we give ourselves to spend on whatever we like. With this app there are 2 users who can add,edit or remove items they buy and it will subtract the total cost of those items from the initial monthly allowance amount.
 
 Once the design is complete I would like to add more features such as user authorization, ability to add new users and to automatically add a set amount to the remaining balance every 30 days to account for the next month's allowance.

@@ -19,6 +19,7 @@ test:
   timeout: 5000
 
 production:
+<<<<<<< HEAD
   adapter: postgresql
   encoding: unicode
   database: db/development.sqlite3

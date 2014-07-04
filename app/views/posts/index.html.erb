@@ -1,0 +1,22 @@
+<h1>Hello World</h1>
+<p>Your Balance = <%= @spendingtotal %></p>
+
+<% @posts.each do |post| %>
+  <div class="postContainer">
+    <p>Title: <%= link_to post.title, post %></p>
+    <p>Content: <%= post.content %></p>
+    <p>Amount: <%= post.amount %></p>
+    <p><%= link_to "Edit", edit_post_path(post) %> |
+       <%= link_to "Delete", post, :confirm => "Are you sure?", :method => :delete %>
+    </p>
+  </div>
+<% end %>
+
+<p><%= link_to "Add a New Post", new_post_path %>
+
+
+
+
+
+
+
